@@ -133,13 +133,13 @@ void loop() {
 }
 
 void ledProcessInformation(EthernetClient lpi) {
+  Serial232.println("");
+  Serial232.println("Enter 1 to turn on RED LED, 2 to turn off Red LED.");
   if (Serial232.available() == 0) {
-    // Wait for input.
-    Serial232.println("Enter 1 to turn on RED LED, 2 to turn off Red LED.");
-    
+    // Wait for input.    
   }
   ledInput = Serial232.parseInt();
-
+  
   switch (ledInput) {
     case 1: 
       if (ledInput == 1) {
